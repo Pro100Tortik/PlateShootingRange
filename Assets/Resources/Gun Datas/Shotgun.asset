@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6376b18ee37dc04fafc729acf59df3a, type: 3}
+  m_Name: Shotgun
+  m_EditorClassIdentifier: 
+  <MaxAmmoCapacity>k__BackingField: 7
+  <ReloadTime>k__BackingField: 0.55
+  <HitRadius>k__BackingField: 0.2
+  <FireSound>k__BackingField: {fileID: 8300000, guid: 314c7b92ca9bdb24cb56db9e90f1ea28, type: 3}
+  <NoAmmoSound>k__BackingField: {fileID: 8300000, guid: 02e75a6fbc339a944ae29b1087e9cdbd, type: 3}
+  <ReloadingSound>k__BackingField: {fileID: 8300000, guid: ea3e97d3b6eab3446b90518bf5af16cd, type: 3}

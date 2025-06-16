@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Localization_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 72855b0f903d74d4f9a1c1522eac6901, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 6863280594200559643
+  m_TableData:
+  - m_Id: 47702872064
+    m_Localized: 'Score: {0}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 122785107968
+    m_Localized: 'Time left: {0}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3108376578887680
+    m_Localized: Reloading
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3166558512746496
+    m_Localized: Start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3167031953199104
+    m_Localized: 'You''ve got {0} {0: point|points}'
+    m_Metadata:
+      m_Items:
+      - rid: 6863280594200559643
+  - m_Id: 3178995706236928
+    m_Localized: Time's up
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3205567553212416
+    m_Localized: New record
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3205643897933824
+    m_Localized: Leaderboard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3245239587311616
+    m_Localized: Plate shooting range
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3246437035937792
+    m_Localized: Start game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3246451208491008
+    m_Localized: Quit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3246571798925312
+    m_Localized: Main menu
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 6863280594200559643
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 0010901666400b00
