@@ -2,10 +2,12 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 using UnityEngine.Localization;
+using UnityEngine.SceneManagement;
 
 public class GameResult : MonoBehaviour
 {
     [SerializeField] private ScoreManagerSO scoreManager;
+    [SerializeField] private LeaderBoard leaderBoard;
     [SerializeField] private TMP_Text resultText;
     [SerializeField] private LocalizedString resultString;
     [SerializeField] private CanvasGroup windowGroup;
@@ -22,8 +24,12 @@ public class GameResult : MonoBehaviour
     [SerializeField] private float recordRotationAmount = 5f;
     [SerializeField] private float recordScaleVariation = 0.1f;
     [SerializeField] private float recordAnimationSpeed = 2f;
-
     private Coroutine newRecordAnimation;
+
+    public void ToMainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
 
     private void Awake()
     {
@@ -45,7 +51,9 @@ public class GameResult : MonoBehaviour
 
         yield return StartCoroutine(AnimateWindow());
 
-        if (true)
+        leaderBoard.LoadRecords();
+
+        if (ScoreManagerSO.TrySetNewBest(scoreManager.CurrentScore) == true)
         {
             newRecordGroup.alpha = 1f;
             newRecordAnimation = StartCoroutine(AnimateNewRecord());

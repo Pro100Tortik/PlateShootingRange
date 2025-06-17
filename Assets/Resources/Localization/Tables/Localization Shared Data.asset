@@ -63,6 +63,10 @@ MonoBehaviour:
     m_Key: ToMainMenu
     m_Metadata:
       m_Items: []
+  - m_Id: 3507306523254784
+    m_Key: EnterName
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

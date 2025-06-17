@@ -47,6 +47,7 @@ public class AudioManagerSO : ScriptableObject
     private static void InitializePool()
     {
         var tab = new GameObject($"AudioSources");
+        DontDestroyOnLoad(tab);
 
         _sourcesPool = new PoolBase<PoolableAudioSource>(
             preloadFunc: () =>

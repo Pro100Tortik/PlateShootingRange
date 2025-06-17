@@ -22,6 +22,11 @@ public class Timer : MonoBehaviour
         timerText.text = $"{minutes}:{Mathf.Max(0, seconds): 00}";
     }
 
+    public void SetTime(float time)
+    {
+        TimeLeft = time;
+    }
+
     public void StartTimer()
     {
         _isRunning = true;

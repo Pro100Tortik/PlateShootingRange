@@ -1,5 +1,5 @@
-using System;
 using UnityEngine;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -7,16 +7,22 @@ public class GameManager : MonoBehaviour
     public static event Action OnGameStop;
 
     [SerializeField] private CountDown countDown;
+    [SerializeField] private ScoreManagerSO scoreManager;
     [SerializeField] private Timer timer;
     [SerializeField] private AudioClip gameEndSound;
     [SerializeField] private GameResult gameResult;
+    [SerializeField] private float gametime = 60f;
 
     private void Awake()
     {
+        scoreManager.ResetScore();
+
         countDown.OnCountDownEnd += StartGame;
 
         timer.OnThreeSecondsLeft += StartCountdown;
         timer.OnTimerEnd += StopGame;
+
+        timer.SetTime(gametime);
     }
 
     private void OnDestroy()

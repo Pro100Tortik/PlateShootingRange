@@ -16,6 +16,8 @@ public class CountDown : MonoBehaviour
     [SerializeField] private AnimationCurve popCurve;
     [SerializeField] private LocalizedString startString;
     [SerializeField] private LocalizedString stopString;
+    [SerializeField] private AudioClip tickSound;
+    [SerializeField] private AudioClip startSound;
     [SerializeField] private Color[] numberColors = new Color[]
     {
         Color.red,
@@ -28,12 +30,16 @@ public class CountDown : MonoBehaviour
     {
         textGroup.alpha = 1f;
 
+        AudioManagerSO.PlaySound(tickSound, transform.position, 0.7f);
         yield return AnimateText("3", 0);
 
+        AudioManagerSO.PlaySound(tickSound, transform.position, 0.7f);
         yield return AnimateText("2", 1);
 
+        AudioManagerSO.PlaySound(tickSound, transform.position, 0.7f);
         yield return AnimateText("1", 2);
 
+        AudioManagerSO.PlaySound(startSound, transform.position, 0.2f);
         yield return AnimateText(startString.GetLocalizedString(), 3);
 
         OnCountDownEnd?.Invoke();
@@ -43,10 +49,13 @@ public class CountDown : MonoBehaviour
     {
         textGroup.alpha = 1f;
 
+        AudioManagerSO.PlaySound(tickSound, transform.position, 0.7f);
         yield return AnimateText("3", 3);
 
+        AudioManagerSO.PlaySound(tickSound, transform.position, 0.7f);
         yield return AnimateText("2", 2);
 
+        AudioManagerSO.PlaySound(tickSound, transform.position, 0.7f);
         yield return AnimateText("1", 1);
 
         yield return AnimateText(stopString.GetLocalizedString(), 0);
